@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate') %>
+
+<h1>Login To YelpCamp</h1>
+<form action="/login" class="validated-form" method="POST" novalidate>
+    <div class="mb-3">
+        <label class="form-label" for="username">Username</label>
+        <input class="form-control" type="text" name="username" id="username" required />
+        <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" type="password" name="password" id="password" required />
+        <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="mb-3">Don't have an account? <a href="/register">Create One</a></div>
+    <button class="btn btn-success">Login</button>
+</form>

@@ -7,6 +7,14 @@
                 <a class="nav-link" href="/campgrounds">Campgrounds</a>
                 <a class="nav-link" href="/campgrounds/new">New Campground</a>
             </ul>
+            <ul class="navbar-nav ml-auto">
+                <% if(!currentUser) { %>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Register</a>
+                <% } else { %>
+                <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+            </ul>
         </div>
     </div>
 </nav>
