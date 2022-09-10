@@ -23,13 +23,22 @@ const seedDB = async () => {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
+            // YOUR USER ID
             author: '631621e8044472a1ceef9873',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
+            geometry: {
+                type: 'Point',
+                coordinates: [-113.1331, 47.0202],
+            },
             images: [
                 {
-                    url: 'https://res.cloudinary.com/pungrumpy/image/upload/v1662735241/YelpCamp/jo6bdynykxbnmwc1muqd.png',
-                    filename: 'YelpCamp/jo6bdynykxbnmwc1muqd',
+                    url: 'https://res.cloudinary.com/pungrumpy/image/upload/v1662737837/YelpCamp/eluuizcavxn8yhjekc9c.jpg',
+                    filename: 'YelpCamp/eluuizcavxn8yhjekc9c',
+                },
+                {
+                    url: 'https://res.cloudinary.com/pungrumpy/image/upload/v1662737842/YelpCamp/uy9zp7vxbb2ra7dc4iza.jpg',
+                    filename: 'YelpCamp/uy9zp7vxbb2ra7dc4iza',
                 },
             ],
             description:

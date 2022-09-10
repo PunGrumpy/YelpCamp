@@ -10,6 +10,7 @@
     "author": "pungrumpy",
     "license": "ISC",
     "dependencies": {
+        "@mapbox/mapbox-sdk": "^0.13.4",
         "cloudinary": "^1.23.0",
         "connect-flash": "^0.1.1",
         "dotenv": "^16.0.2",
