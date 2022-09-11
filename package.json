@@ -30,5 +30,8 @@
         "passport-local": "^1.0.0",
         "passport-local-mongoose": "^7.1.2",
         "sanitize-html": "^2.7.1"
+    },
+    "engines": {
+        "node": "18.19.0"
     }
 }
