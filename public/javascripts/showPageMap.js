@@ -15,3 +15,5 @@ new mapboxgl.Marker({ color: 'red', draggable: true })
         )
     )
     .addTo(map);
+
+map.addControl(new mapboxgl.NavigationControl());
