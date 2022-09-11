@@ -17,14 +17,12 @@ const MongoDBStore = require('connect-mongo')(session);
 
 const User = require('./models/user');
 const ExpressError = require('./utils/ExpressError');
-// const dbUrl = process.env.DB_URL;
-const dbUrl = 'mongodb://localhost:27017/yelp-camp';
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 
-// 'mongodb://localhost:27017/yelp-camp'
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     // useCreateIndex: true,
@@ -48,9 +46,11 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
 
+const secret = process.env.SECRET || 'thisisshouldbebettersecret';
+
 const store = new MongoDBStore({
     url: dbUrl,
-    secret: 'thisisshouldbebettersecret',
+    secret,
     touchAfter: 24 * 60 * 60,
 });
 
@@ -61,7 +61,7 @@ store.on('error', function (e) {
 const sessionConfig = {
     store,
     name: 'session',
-    secret: 'thisisshouldbebettersecret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
