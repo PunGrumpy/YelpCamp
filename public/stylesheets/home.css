@@ -20,21 +20,10 @@ body {
     border-bottom: 0.25rem solid transparent;
 }
 
-/* .nav-link:hover {
-    color: rgba(255, 255, 255, 0.7);
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-} */
-
 .nav-link.active {
     color: white;
     border-bottom-color: white;
 }
-
-/* .btn-secondary,
-.btn-secondary:hover {
-    color: #333;
-    text-shadow: none;
-} */
 
 .navbar {
     background-color: transparent;
@@ -113,5 +102,34 @@ body {
     }
     100% {
         background-position: 0 0;
+    }
+}
+
+/* Fade in text */
+.fade-text {
+    position: relative;
+    transform: scale(0.95);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-text {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+}
+
+.fade-text:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
     }
 }
