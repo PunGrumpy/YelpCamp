@@ -18,7 +18,7 @@
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <header class="mb-auto">
                 <div>
-                    <nav class="navbar navbar-expand-lg navbar-dark">
+                    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top">
                         <div class="container-fluid">
                             <h1 class="float-md-start mb-0"><strong>YelpCamp</strong></h1>
                             <button
@@ -30,12 +30,10 @@
                                 aria-expanded="false"
                                 aria-label="Toggle navigation"
                             >
-                                <span
-                                    class="navbar-toggler-icon d-flex justify-content-start align-items-center"
-                                ></span>
+                                <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 float-end text-end">
                                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                                     <a class="nav-link" href="/campgrounds">Campgrounds</a>
                                     <% if(!currentUser) { %>
