@@ -3,7 +3,7 @@ const map = new mapboxgl.Map({
     container: 'clusterMap',
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/dark-v10',
-    center: [-103.5917, 40.6699],
+    center: [100.0586688, 13.7239358],
     zoom: 3,
 });
 
