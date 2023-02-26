@@ -1,36 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top sticky-top bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand float-md-start mb-0" href=""><strong>YelpCamp</strong></a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="container-fluid">
-                <ul class="navbar-nav me-auto mb-lg-0 float-start text-start">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
-                    <a class="nav-link" href="/campgrounds">Campgrounds</a>
-                    <a class="nav-link" href="/campgrounds/new">New Campground</a>
-                    <a class="nav-link" href="https://pun-grumpy.vercel.app" target="_blank"
-                        >Contact</a
-                    >
-                </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 float-end text-end">
-                    <% if(!currentUser) { %>
-                    <a class="nav-link" href="/login">Login</a>
-                    <a class="nav-link" href="/register">Register</a>
-                    <% } else { %>
-                    <a class="nav-link" href="/logout">Logout</a>
-                    <% } %>
-                </ul>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand float-md-start mb-0" href=""
+      ><strong>YelpCamp</strong></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-lg-0 float-start text-start">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/campgrounds">Campgrounds</a>
+          <a class="nav-link" href="/campgrounds/new">New Campground</a>
+          <a
+            class="nav-link"
+            href="https://pun-grumpy.vercel.app"
+            target="_blank"
+            >Contact</a
+          >
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 float-end text-end">
+          <% if(!currentUser) { %>
+          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/register">Register</a>
+          <% } else { %>
+          <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
+        </ul>
+      </div>
     </div>
+  </div>
 </nav>
